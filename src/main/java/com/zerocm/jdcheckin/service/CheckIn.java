@@ -28,9 +28,10 @@ import static java.lang.Thread.sleep;
 @Service
 public class CheckIn {
     private final static Logger logger = LoggerFactory.getLogger(CheckIn.class);
-    @Value("${jdCookie}")
     private String Cookie;
-
+    public void CheckIn(String cookie){
+        this.Cookie = cookie;
+    }
     private static String  JingDongBeanUrl = "https://api.m.jd.com/client.action?functionId=signBeanIndex&appid=ld";//京东京豆
     private static String  SteelUrl = "https://coin.jd.com/m/gb/getBaseInfo.html";//京东钢镚
     private static String  CashUrl = "https://api.m.jd.com/client.action?functionId=myhongbao_balance";//京东京豆

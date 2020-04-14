@@ -22,8 +22,11 @@ public class MailTool {
     private JavaMailSender javaMailSender;
     @Value("${spring.mail.username}")
     private String mailFrom;
-    @Value("${mailTo}")
     private String mailTo;
+
+    public void MailTool(String mailTo){
+        this.mailTo = mailTo;
+    }
 
     public void sendSimpleMail(String text) {
         try {
@@ -39,6 +42,18 @@ public class MailTool {
             logger.info("--------邮件发送中---------");
             javaMailSender.send(simpleMailMessage);
             logger.info("--------邮件发送成功---------");
+            logger.info("\n" +
+                    "||'''''''''''''''''''''''''''''''''''''''''''''''''''||\n" +
+                    "||     ||||||||| ||||||||  ||||||||| ||||||||| MMMMMM||\n" +
+                    "||      ,,,, ||  ||    ||   ,,,, ||  ||  ||    MMMMMM||\n" +
+                    "||      |,,| ||  ||    ||   |,,| ||  ''''||''''      ||\n" +
+                    "||          '||  ||||||||       '||  /; '||  ;\\      ||\n" +
+                    "||              ,,,, dddddddddddddP'                 ||\n" +
+                    "||MMMMMMMMMMMMMMMMMMMMMMMBBbbb                       ||\n" +
+                    "||YMMMMMMMMMMMMMMMMMMKPPP''           Coca Cola      ||\n" +
+                    "||,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,||\n" +
+                    "                                                       \n" +
+                    "                       Coca-cola.(Chinese:0cm大佬)");
         } catch (Exception e) {
             e.printStackTrace();
         }
