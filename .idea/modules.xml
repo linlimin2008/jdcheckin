@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jdcheckin.iml" filepath="$PROJECT_DIR$/jdcheckin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdcheckinCore/jdcheckinCore.iml" filepath="$PROJECT_DIR$/jdcheckinCore/jdcheckinCore.iml" />
     </modules>
   </component>
 </project>
